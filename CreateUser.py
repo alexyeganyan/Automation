@@ -12,86 +12,77 @@ driver = webdriver.Firefox()
 driver.get("http://automationpractice.com/index.php")
 driver.implicitly_wait(10)
 # driver.findElement(By.id("core-navigation")
-signLink = driver.find_element_by_css_selector(".header_user_info , .login")
-signLink.click()
+driver.find_element_by_css_selector(".header_user_info , .login").click()
+
+# Enter invalid email address and check error message
+emailAddress = driver.find_element_by_css_selector("div.columns-container  #email_create").send_keys("bbb@.g.com")
+
+# Click on create account
+driver.find_element_by_css_selector("button#SubmitCreate").click()
+# Wait until error text is appeared
+
+
+def len_inner_text(elem):
+    return len(elem.find_element_by_css_selector("#create_account_error.alert.alert-danger").get_attribute("innerText"))
+
+
+WebDriverWait(driver, 15).until(lambda x: len_inner_text(x) > 0)
+
+inner_text = driver.find_element_by_css_selector("#create_account_error.alert.alert-danger").get_attribute("innerText")
+assert inner_text == "Invalid email address."
 
 # Enter valid email address
 emailAddress = driver.find_element_by_css_selector("div.columns-container  #email_create")
-# emailAddress.send_keys("aaa@gg.com")
+emailAddress.clear()
 emailAddress.send_keys("bbb@gg.com")
+# emailAddress.send_keys("aaa@gg.com")
 # Click on create account
-createAccount = driver.find_element_by_css_selector("button#SubmitCreate")
-createAccount.click()
+driver.find_element_by_css_selector("button#SubmitCreate").click()
 # Check Mr. option
-gender = driver.find_element_by_css_selector("div.radio-inline #id_gender1")
-gender.click()
+driver.find_element_by_css_selector("div.radio-inline #id_gender1").click()
 # Enter first name
-firstName = driver.find_element_by_css_selector("div.account_creation #customer_firstname")
-firstName.send_keys("Nocholas")
+driver.find_element_by_css_selector("div.account_creation #customer_firstname").send_keys("Nocholas")
 # Enter last name
-lastName = driver.find_element_by_css_selector("div.account_creation #customer_lastname")
-lastName.send_keys("Johnson")
-# Enter password
-password = driver.find_element_by_css_selector("div.account_creation #passwd")
-password.send_keys("Johnson")
+driver.find_element_by_css_selector("div.account_creation #customer_lastname").send_keys("Johnson")
+# Enter password# Enter password
+driver.find_element_by_css_selector("div.account_creation #passwd").send_keys("Johnson")
 # Enter date
-days = Select(driver.find_element_by_css_selector("div#uniform-days #days"))
-days.select_by_visible_text("11  ")
-months = Select(driver.find_element_by_css_selector("div#uniform-months #months"))
-months.select_by_visible_text("May ")
-years = Select(driver.find_element_by_css_selector("div#uniform-years #years"))
-years.select_by_visible_text("2001  ")
-# # Check "Sign up for newsletter" AND "Recieve special offers"
-# newsLetter = driver.find_element_by_css_selector(".//*[@id='newsletter']")
-# newsLetter.click()
-# specialOffer = driver.find_element_by_css_selector(".//*[@id='optin']")
-# specialOffer.click()
-# # Enter address details
-# # Enter first name
-# firstName = driver.find_element_by_css_selector(".//*[@id='firstname']")
-# firstName.send_keys("Bernard")
-# # Enter last name
-# lastName = driver.find_element_by_css_selector(".//*[@id='lastname']")
-# lastName.send_keys("Lampard")
-# # Enter company name
-# company = driver.find_element_by_css_selector(".//*[@id='company']")
-# company.send_keys("Foormols")
-# # Enter address
-# address1 = driver.find_element_by_css_selector(".//*[@id='address1']")
-# address1.send_keys("1622 E Ayre Street")
-# # Enter address
-# address2 = driver.find_element_by_css_selector(".//*[@id='address2']")
-# address2.send_keys("Sas1120")
-# # Enter city
-# city = driver.find_element_by_css_selector(".//*[@id='city']")
-# city.send_keys("Honk-Kong")
-# # Enter state
-# state = Select(driver.find_element_by_css_selector(".//*[@id='id_state']"))
-# state.select_by_value("5")
-# # Enter zip code
-# zipCode = driver.find_element_by_css_selector(".//*[@id='postcode']")
-# zipCode.send_keys("15444")
-# # Enter country
-# country = Select(driver.find_element_by_css_selector(".//*[@id='id_country']"))
-# country.select_by_value("21")
-# # Enter additional info
-# additional = driver.find_element_by_css_selector(".//*[@id='other']")
-# additional.send_keys("I am an engineer\nI live in Yerevan")
-# # Enter home phone
-# homePhone = driver.find_element_by_css_selector(".//*[@id='phone']")
-# homePhone.send_keys("+37455997711")
-# # Enter home phone
-# mobilePhone = driver.find_element_by_css_selector(".//*[@id='phone_mobile']")
-# mobilePhone.send_keys("+37455883300")
-# # Enter email address for future references
-# emailReference = driver.find_element_by_css_selector(".//*[@id='alias']")
-# emailReference.send_keys("Mango@ss.com")
+Select(driver.find_element_by_css_selector("div#uniform-days #days")).select_by_visible_text("11  ")
+Select(driver.find_element_by_css_selector("div#uniform-months #months")).select_by_visible_text("May ")
+Select(driver.find_element_by_css_selector("div#uniform-years #years")).select_by_visible_text("2001  ")
+# Check "Sign up for newsletter" AND "Recieve special offers"
+newsLetter = driver.find_element_by_css_selector("#newsletter").click()
+driver.find_element_by_css_selector("#optin").click()
+# Enter address details
+# Enter first name
+driver.find_element_by_xpath("//*[@id='firstname']").send_keys("Bernard")
+# Enter last name
+driver.find_element_by_xpath(".//*[@id='lastname']").send_keys("Lampard")
+# Enter company name
+driver.find_element_by_css_selector("#company").send_keys("Foormols")
+# Enter address
+driver.find_element_by_css_selector("#address1").send_keys("1622 E Ayre Street")
+# Enter address
+driver.find_element_by_css_selector("#address2").send_keys("Sas1120")
+# Enter city
+driver.find_element_by_css_selector("#city").send_keys("Honk-Kong")
+# Enter state
+Select(driver.find_element_by_xpath(".//*[@id='id_state']")).select_by_value("5")
+# Enter zip code
+driver.find_element_by_xpath(".//*[@id='postcode']").send_keys("15444")
+# Enter country
+Select(driver.find_element_by_css_selector("#id_country")).select_by_value("21")
+# Enter additional info
+driver.find_element_by_css_selector("#other").send_keys("I am an engineer\nI live in Yerevan")
+# Enter home phone
+driver.find_element_by_css_selector("#phone").send_keys("+37455997711")
+# Enter home phone
+driver.find_element_by_css_selector("#phone_mobile").send_keys("+37455883300")
+# Enter email address for future references
+driver.find_element_by_css_selector("#alias").send_keys("Mango@ss.com")
 # # // Register all data
 # # register = driver.find_element_by_css_selector(".//*[@id='submitAccount']")
 # # register.click()
-#
-# # Maximize the Browser window
-# # driver.manage().window().maximize()
 # #
 # # // Get the current page URL and store the value in variable 'str'
 # # String str = driver.getCurrentUrl()
@@ -99,6 +90,6 @@ years.select_by_visible_text("2001  ")
 # # // Print the value of variable in the console
 # # System.out.println("The current URL is " + str)
 # # // System.out.println(searchText.getText()
-
+#
 time.sleep(3)
 driver.close()
