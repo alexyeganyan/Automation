@@ -1,0 +1,78 @@
+1622299079622	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofileDbKHeJ"
+JavaScript error: anncprcaeft.cfg, line 2: ReferenceError: Components is not defined
+1622299080905	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622299083682	Marionette	INFO	Listening on port 64535
+1622299083830	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622299089145	Marionette	INFO	Stopped listening on port 64535
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622299286183	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilelV2aqy"
+JavaScript error: anncprcaeft.cfg, line 2: ReferenceError: Components is not defined
+1622299286903	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622299289668	Marionette	INFO	Listening on port 65158
+1622299289868	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622299296813	Marionette	INFO	Stopped listening on port 65158
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622299392558	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofile8sULW9"
+JavaScript error: anncprcaeft.cfg, line 2: ReferenceError: Components is not defined
+1622299393261	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622299395826	Marionette	INFO	Listening on port 49160
+1622299396242	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622299403325	Marionette	INFO	Stopped listening on port 49160
+1622299426477	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofileNORLPv"
+JavaScript error: anncprcaeft.cfg, line 2: ReferenceError: Components is not defined
+1622299427207	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622299429915	Marionette	INFO	Listening on port 49333
+1622299430157	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0141,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622299431208	Marionette	INFO	Stopped listening on port 49333
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622299535609	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilep1tp0T"
+JavaScript error: anncprcaeft.cfg, line 2: ReferenceError: Components is not defined
+1622299536340	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622299539157	Marionette	INFO	Listening on port 49818
+1622299539301	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622299544032	Marionette	INFO	Stopped listening on port 49818
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622299992471	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilewRIdDB"
+JavaScript error: anncprcaeft.cfg, line 2: ReferenceError: Components is not defined
+1622299993225	Marionette	INFO	Marionette enabled
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622299995843	Marionette	INFO	Listening on port 51494
+1622299996144	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622300000988	Marionette	INFO	Stopped listening on port 51494
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

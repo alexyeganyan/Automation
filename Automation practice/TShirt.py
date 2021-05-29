@@ -84,6 +84,7 @@ def close_browser():
     driver.close()
 
 
+# open_browser(url="http://automationpractice.com/index.php", browser="firefox")
 open_browser(url="http://automationpractice.com/index.php", browser="chrome")
 click_tshirt_sort()
 product_size_composition_condition()

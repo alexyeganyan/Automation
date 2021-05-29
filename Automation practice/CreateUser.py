@@ -5,6 +5,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.ui import Select
 import time
 
+# driver = webdriver.Remote(command_executor="http://192.168.0.108:4444/wd/hub",
+#                           desired_capabilities={"browserName": "firefox"})
+
 
 def enter_email_address(address):
     email_address = driver.find_element_by_css_selector("div.columns-container  #email_create")
